@@ -20,11 +20,11 @@ const router = createBrowserRouter([
             },
             {
                 path: 'login',
-                element: <LoginWrapper />  // Use the Login component here
+                element: <LoginWrapper />  
             },
             {
                 path: 'dashboard',
-                element: <Dashboard />  // Route to the Dashboard component
+                element: <Dashboard />  
             }
         ],
     },

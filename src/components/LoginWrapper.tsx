@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Login.css';
 import SignUp from './SignUp';
 import Signin from './Signin';
-import Overlay from './Slider_Overlay';
+import Overlay from './Slider';
 
 const LoginWrapper: React.FC = () => {
     const [rightPanelActive, setRightPanelActive] = useState<boolean>(false);

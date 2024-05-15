@@ -34,8 +34,8 @@ const Dashboard: React.FC = () => {
     return (
         <main className={styles.mainContainer}>
             <div className={styles.chartTitle}>
-                <h3>POWER CURVE</h3>
-                <ResponsiveContainer width="50%" height={300} aspect={2}>
+                <h3>POWER CURVE (Dummy data, can ignore)</h3>
+                <ResponsiveContainer width="80%" height={300} aspect={2}>
                     <LineChart data={powerCurveData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="name" />
@@ -46,7 +46,7 @@ const Dashboard: React.FC = () => {
                     </LineChart>
                 </ResponsiveContainer>
             </div>
-            <div className={styles.mainTitle}>
+            <div className={styles.chartTitle}>
                 <h3>DASHBOARD</h3>
             </div>
             <div className={styles.charts}>

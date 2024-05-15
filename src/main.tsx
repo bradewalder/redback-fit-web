@@ -3,29 +3,16 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './routes/Root/Root.tsx'; 
 import LoginWrapper from './components/LoginWrapper';
-import Dashboard from './components/Dashboard/App.tsx';
+import App from './components/Dashboard/App';
 
 const router = createBrowserRouter([
     {
-        element: <Root/>,
-        errorElement: <Root/>,
+        element: <Root />,
+        errorElement: <Root />,
         children: [
-            {
-                path: '/',
-                element: <div>Home</div>,
-            },
-            {
-                path: 'about',
-                element: <div>About</div>,
-            },
-            {
-                path: 'login',
-                element: <LoginWrapper />  
-            },
-            {
-                path: 'dashboard',
-                element: <Dashboard />  
-            }
+            
+            { path: 'login', element: <LoginWrapper /> },
+            { path: 'dashboard/*', element: <App /> }, // Use App and manage sub-routes inside it
         ],
     },
 ]);

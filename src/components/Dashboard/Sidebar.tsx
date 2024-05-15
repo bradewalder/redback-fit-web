@@ -1,6 +1,8 @@
 import React from 'react';
-import { BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsMenuButtonWideFill, BsFillGearFill } from 'react-icons/bs';
+import { NavLink } from 'react-router-dom';
 import styles from './Dashboard.module.css';
+import { BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsMenuButtonWideFill, BsFillGearFill, BsTable } from 'react-icons/bs';
+
 
 const Sidebar: React.FC = () => {
   return (
@@ -9,12 +11,15 @@ const Sidebar: React.FC = () => {
         Redback Operations
       </div>
       <ul className={styles.sidebarList}>
-        <li className={styles.sidebarListItem}><BsGrid1X2Fill /> Dashboard</li>
-        <li className={styles.sidebarListItem}><BsFillArchiveFill /> Features</li>
-        <li className={styles.sidebarListItem}><BsFillGrid3X3GapFill /> Categories</li>
-        <li className={styles.sidebarListItem}><BsMenuButtonWideFill /> Reports</li>
-        <li className={styles.sidebarListItem}><BsFillGearFill /> Settings</li>
+        <li className={styles.sidebarListItem}><NavLink to="/dashboard"><BsGrid1X2Fill /> Dashboard</NavLink></li>
+        <li className={styles.sidebarListItem}><NavLink to="/features"><BsFillArchiveFill /> Features</NavLink></li>
+        <li className={styles.sidebarListItem}><NavLink to="/categories"><BsFillGrid3X3GapFill /> Categories</NavLink></li>
+        <li className={styles.sidebarListItem}><NavLink to="/reports"><BsMenuButtonWideFill /> Reports</NavLink></li>
+        <li className={styles.sidebarListItem}><NavLink to='/dashboard/data-predictions'><BsTable /> Data & Predictions</NavLink></li>
       </ul>
+      <div className={styles.sidebarSettings}>
+        <NavLink to="/settings" className={styles.sidebarBottomLink}><BsFillGearFill /> Settings</NavLink>
+      </div>
     </aside>
   );
 };

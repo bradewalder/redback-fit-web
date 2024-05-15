@@ -13,7 +13,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Dashboard />} />  
-          <Route path="/data-predictions" element={<DataPredictions />} />  //GET THIS TO RENDER 
+          <Route path="/data-predictions" element={<DataPredictions />} />  
         </Routes>
       </div>
     </div>

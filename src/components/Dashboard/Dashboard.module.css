@@ -5,16 +5,16 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #1e1e1e; /* Consistent dark background */
-  color: #dddddd; /* Light grey text color similar to the login page */
+  background-color: #1e1e1e; 
+  color: #dddddd; 
   font-family: 'Montserrat', sans-serif;
 }
 
 /* Layout Containers */
 .gridContainer {
   display: grid;
-  grid-template-columns: 260px auto; /* Sidebar width and the rest for content */
-  grid-template-rows: auto 1fr; /* Auto for header, and remaining space for main content */
+  grid-template-columns: 260px auto; 
+  grid-template-rows: auto 1fr;
   grid-template-areas: "sidebar header" "sidebar main";
   height: 100vh;
 }
@@ -49,22 +49,22 @@ body {
 }
 
 .icon {
-  color: #000000; /* Icon color */
-  background-color: #fff; /* Background color for icons */
-  border-radius: 5px; /* Rounded corners for the icons/search bar */
-  padding: 5px 10px; /* Padding inside the search bar */
-  margin-left: 10px; /* Space between icons */
+  color: #000000; 
+  background-color: #fff; 
+  border-radius: 5px; 
+  padding: 5px 10px; 
+  margin-left: 10px; 
 }
 
 .searchInput {
-  flex-grow: 1; /* Let the search input expand */
-  margin-right: 10px; /* Space before the search icon */
-  padding: 8px 12px; /* Padding inside the input */
-  font-size: 16px; /* Font size for the text inside the input */
-  border: none; /* No border for a modern look */
-  border-radius: 5px; /* Rounded corners for the input */
-  outline: none; /* Remove the default focus outline */
-  background-color: #ffffff; /* White background for the input */
+  flex-grow: 1; 
+  margin-right: 10px; 
+  padding: 8px 12px; 
+  font-size: 16px;
+  border: none; 
+  border-radius: 5px; 
+  outline: none; 
+  background-color: #ffffff; 
 }
 
 /* Sidebar */
@@ -84,22 +84,22 @@ body {
 
 .sidebarTitle {
   display: flex;
-  justify-content: center; /* Centers the title horizontally in the sidebar */
-  align-items: center; /* Centers the title vertically (useful if there's more height to the title area) */
-  font-size: 16px; /* Increase font size */
-  font-weight: bold; /* Makes the font bold */
-  padding: 20px 0; /* Adds vertical padding for better spacing */
-  width: 100%; /* Ensures the title section spans the full width of the sidebar */
-  margin-bottom: 30px; /* Provides space between the title and the list items */
-  color: #ffffff; /* Ensures the title is white, adjust color as necessary */
+  justify-content: center; 
+  align-items: center; 
+  font-size: 16px;
+  font-weight: bold; 
+  padding: 20px 0; 
+  width: 100%; 
+  margin-bottom: 30px; 
+  color: #ffffff; 
 }
 
 /* Adjust if there's a specific title div */
 .sidebar .title {
-  font-size: 16px; /* Sets a specific font size */
-  font-weight: bold; /* Increase weight for emphasis */
-  width: 100%; /* Ensure it occupies the full width of its container */
-  text-align: center; /* Center the text horizontally */
+  font-size: 16px;
+  font-weight: bold; 
+  width: 100%; 
+  text-align: center; 
 }
 
 
@@ -109,7 +109,7 @@ body {
   list-style-type: none;
   padding: 0;
   margin-top: 40px;
-  flex-grow: 1; /* Allows this container to fill all available space */
+  flex-grow: 1; 
 }
 
 .sidebarListItem {
@@ -118,23 +118,23 @@ body {
 }
 
 .sidebarListItem:last-child {
-  margin-bottom: 0; /* Ensure no extra margin on the last item in any list */
+  margin-bottom: 0; 
 }
 
 .sidebarSettings {
-  margin-top: auto; /* Pushes settings to the bottom */
-  width: 100%; /* Ensure it occupies the full width of its container */
+  margin-top: auto; 
+  width: 100%; 
 }
 
 .sidebarBottomLink {
   display: block;
   color: #ffffff;
-  padding: 30px 20px; /* Consistent with other links */
+  padding: 30px 20px; 
   text-decoration: none;
-  font-size: 18px; /* Consistent with other links */
-  width: 100%; /* Ensures full width for clickable area */
-  background: none; /* No background by default */
-  transition: background-color 0.3s ease; /* Smooth transition for hover */
+  font-size: 18px; 
+  width: 100%; 
+  background: none; 
+  transition: background-color 0.3s ease; 
 }
 
 .sidebarListItem a {
@@ -157,8 +157,8 @@ body {
   grid-area: main;
   overflow-y: auto;
   padding: 20px;
-  margin-left: 260px; /* Offset for the sidebar width */
-  padding-top: 0px; /* Add top padding to account for the fixed header */
+  margin-left: 260px; 
+  padding-top: 0px; 
 }
 
 
@@ -198,20 +198,20 @@ body {
 /* Top Section for Power Curve Data Visualization */
 .topSection {
   padding: 20px;
-  background-color: #2a2f33; /* Darker shade for contrast */
-  margin-bottom: 20px; /* Separates the top and bottom sections visually */
-  border-radius: 8px; /* Rounded corners for aesthetic */
+  background-color: #2a2f33; 
+  margin-bottom: 20px; 
+  border-radius: 8px; 
 }
 
 .chartPlaceholder {
-  height: 300px; /* Adjust height as needed */
-  background-color: #f3f3f3; /* Light background to highlight this area */
+  height: 300px; 
+  background-color: #f3f3f3; 
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 10px;
-  border: 1px dashed #cccccc; /* Dashed border to indicate this is a placeholder */
-  color: #666666; /* Text color */
+  border: 1px dashed #cccccc; 
+  color: #666666; 
   font-size: 16px;
 }
 
@@ -219,69 +219,69 @@ body {
 .bottomSection {
   padding: 20px;
   width: 70%;
-  background-color: #32373c; /* Even darker to differentiate from top section */
-  border-radius: 8px; /* Consistent rounded corners */
+  background-color: #32373c; 
+  border-radius: 8px; 
   margin: auto;
 }
 
 .dragDropArea {
-  height: 200px; /* Adjust height as needed */
-  border: 2px dashed #FF3465; /* Highlighted border for emphasis */
-  color: #FF3465; /* Text color to match the border */
+  height: 200px; 
+  border: 2px dashed #FF3465; 
+  color: #FF3465; 
   display: flex;
-  flex-direction: column; /* Align children vertically */
+  flex-direction: column; 
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  cursor: pointer; /* Cursor change to indicate interactivity */
-  transition: background-color 0.2s ease-in-out; /* Smooth transition for background color */
-  text-align: center; /* Ensures text is centered */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out; 
+  text-align: center;
 }
 
 .dragDropArea:hover {
-  background-color: #1e1e1e; /* Darken background on hover for feedback */
+  background-color: #1e1e1e; 
 }
 
 .dragDropArea p {
-  margin: 5px 0; /* Adds space between paragraphs */
+  margin: 5px 0; 
 }
 
 .filePreview {
   margin-top: 20px;
-  border: 1px solid #ccc; /* Borders for visual separation */
+  border: 1px solid #ccc; 
   padding: 10px;
-  background-color: #f9f9f9; /* Light background for the preview area */
-  color: #000; /* Black text for readability */
-  overflow: auto; /* Enables scrollbar if content overflows */
-  height: 250px; /* Fixed height for scroll */
-  width: 100%; /* Full width */
+  background-color: #f9f9f9; 
+  color: #000; 
+  overflow: auto; 
+  height: 250px; 
+  width: 100%; 
 }
 
 .filePreview table {
-  width: 100%; /* Full width to use all available space */
-  border-collapse: collapse; /* Collapses border to avoid double lines */
+  width: 100%; 
+  border-collapse: collapse; 
 }
 
 .filePreview th, .filePreview td {
-  border: 1px solid #ddd; /* Light gray border for each cell */
-  padding: 8px; /* Padding inside cells for text alignment */
-  text-align: left; /* Align text to the left within cells */
+  border: 1px solid #ddd;
+  padding: 8px; 
+  text-align: left; 
 }
 
 .filePreview th {
-  background-color: #4a90e2; /* Light blue background for headers */
-  color: white; /* White text color for headers */
+  background-color: #4a90e2; 
+  color: white; 
 }
 
 .resetButton {
-  display: block; /* Ensures the button is a block-level element */
+  display: block; 
   background-color: #FF3465;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin: 10px auto 20px; /* Center button and provide spacing */
+  margin: 10px auto 20px; 
 }
 
 

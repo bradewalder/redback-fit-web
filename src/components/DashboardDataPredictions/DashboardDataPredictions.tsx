@@ -1,11 +1,11 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, ReactNode } from 'react';
 import { useDropzone } from 'react-dropzone';
 import * as XLSX from 'xlsx';
 import styles from '../../routes/Dashboard/Dashboard.module.css';
 import { FaFileAlt } from 'react-icons/fa';
 
 
-type DataType = { [key: string]: any };
+type DataType = { [key: string]: ReactNode };
 
 const DashboardDataPredictions: React.FC = () => {
 	const [data, setData] = useState<DataType[]>([]);

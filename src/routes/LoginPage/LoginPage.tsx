@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './Login.style.css';
-import SignUp from './LoginSignUp';
-import Signin from './LoginSignIn';
-import Overlay from './LoginSlider';
+import SignUp from '../../components/SignUp/SignUp.tsx';
+import Signin from '../../components/SignIn/SignIn.tsx';
+import Overlay from '../../components/SignInSlider/SignInSlider.tsx';
 
-const LoginWrapper: React.FC = () => {
+const LoginPage: React.FC = () => {
 	const [rightPanelActive, setRightPanelActive] = useState<boolean>(false);
 
 	const handleClickSignUpButton = () => setRightPanelActive(true);
@@ -57,4 +57,4 @@ const LoginWrapper: React.FC = () => {
 	);
 };
 
-export default LoginWrapper;
+export default LoginPage;

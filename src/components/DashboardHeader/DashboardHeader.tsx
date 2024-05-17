@@ -1,8 +1,8 @@
 import React from 'react';
 import { BsFillBellFill, BsFillEnvelopeFill, BsPersonCircle, BsSearch } from 'react-icons/bs';
-import styles from './Dashboard.module.css';
+import styles from '../../routes/Dashboard/Dashboard.module.css';
 
-const Header: React.FC = () => {
+const DashboardHeader: React.FC = () => {
 	return (
 		<header className={styles.header}>
 			<div className={styles.headerLeft}>
@@ -18,4 +18,4 @@ const Header: React.FC = () => {
 	);
 };
 
-export default Header;
+export default DashboardHeader;

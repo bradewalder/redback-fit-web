@@ -1,6 +1,6 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts';
-import styles from './Dashboard.module.css';
+import styles from '../../routes/Dashboard/Dashboard.module.css';
 
 interface DataItem {
   name: string;
@@ -11,7 +11,7 @@ interface DataItem {
 
 // Random data
 
-const Dashboard: React.FC = () => {
+const DashboardLanding: React.FC = () => {
 	const data: DataItem[] = [
 		{ name: 'Test 1', test1: 4000, test2: 2400, amt: 2400 },
 		{ name: 'Test 2', test1: 3000, test2: 1398, amt: 2210 },
@@ -77,4 +77,4 @@ const Dashboard: React.FC = () => {
 	);
 };
 
-export default Dashboard;
+export default DashboardLanding;

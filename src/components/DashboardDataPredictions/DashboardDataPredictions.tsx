@@ -1,13 +1,13 @@
 import React, { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import * as XLSX from 'xlsx';
-import styles from './Dashboard.module.css';  
+import styles from '../../routes/Dashboard/Dashboard.module.css';
 import { FaFileAlt } from 'react-icons/fa';
 
 
-type DataType = { [key: string]: any }; 
+type DataType = { [key: string]: any };
 
-const DataPredictions: React.FC = () => {
+const DashboardDataPredictions: React.FC = () => {
 	const [data, setData] = useState<DataType[]>([]);
 	const [fileLoaded, setFileLoaded] = useState<boolean>(false);
 
@@ -22,7 +22,7 @@ const DataPredictions: React.FC = () => {
 				const sheetName = workbook.SheetNames[0];
 				const worksheet = workbook.Sheets[sheetName];
 				const json = XLSX.utils.sheet_to_json(worksheet) as DataType[]; // Explicitly cast to DataType[]
-				setData(json); 
+				setData(json);
 				setFileLoaded(true); // Set the file loaded state to true
 			};
 			reader.readAsBinaryString(file);
@@ -60,7 +60,7 @@ const DataPredictions: React.FC = () => {
 	);
 
 	return (
-		<div className={styles.mainContainer}>  
+		<div className={styles.mainContainer}>
 			<h1 className={styles.chartTitle}>Data & Predictions</h1>
 			<div className={styles.topSection}>
 				<p>Power Curve Data</p>
@@ -87,4 +87,4 @@ const DataPredictions: React.FC = () => {
 	);
 };
 
-export default DataPredictions;
+export default DashboardDataPredictions;

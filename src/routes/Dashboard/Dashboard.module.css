@@ -200,6 +200,7 @@ body {
   padding: 20px;
   background-color: #2a2f33; 
   margin-bottom: 20px; 
+  margin-top: 20px;
   border-radius: 8px; 
 }
 
@@ -215,6 +216,51 @@ body {
   font-size: 16px;
 }
 
+/* Form Container */
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background-color: #2a2f33; 
+  border-radius: 8px; 
+}
+
+.formLabel {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.formInput, .formSelect {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #3a3f44;
+  color: #ffffff;
+  width: 100%;  /* Ensure all input elements have the same width */
+  box-sizing: border-box;  /* Include padding and border in the element's total width and height */
+}
+
+.formButton {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #ff3465;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formButton:hover {
+  background-color: #ff577a;
+}
+
+
 /* Bottom Section for Drag and Drop CSV Files */
 .bottomSection {
   padding: 20px;
@@ -222,6 +268,7 @@ body {
   background-color: #32373c; 
   border-radius: 8px; 
   margin: auto;
+  margin-top: 50px;
 }
 
 .dragDropArea {

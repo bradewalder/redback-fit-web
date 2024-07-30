@@ -6,7 +6,7 @@ import { FaFileAlt } from 'react-icons/fa';
 
 type DataType = { [key: string]: any }; 
 
-const DataPredictions: React.FC = () => {
+const DashboardDataPredictions: React.FC = () => {
     const [data, setData] = useState<DataType[]>([]);
     const [fileLoaded, setFileLoaded] = useState<boolean>(false);
     const [powerCurveData, setPowerCurveData] = useState<any>(null);

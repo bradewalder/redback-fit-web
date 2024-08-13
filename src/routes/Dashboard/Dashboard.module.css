@@ -104,24 +104,127 @@ body {
 
 
 /* Main Container Styles */
-.mainContainer {
-  position: fixed; /* Ensures the container is fixed within the viewport */
-  top: 60px; /* Align with the bottom of the header */
-  left: 260px; /* Start right after the sidebar, assuming sidebar width is fixed at 260px */
-  right: 0; /* Stretch to the right edge of the viewport */
-  bottom: 0; /* Stretch to the bottom of the viewport */
-  overflow-y: auto; /* Allows vertical scrolling within the container */
-  padding: 20px; /* Padding inside the container for content */
-  z-index: 500; /* Make sure this is properly layered above other base elements but below modals */
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px; /* Space between this section and the power curve */
 }
 
-/* Component Window/Card Style */
+.searchAndIcons {
+  display: flex;
+  align-items: center;
+  position: absolute; /* Absolute positioning relative to nearest positioned ancestor */
+  right: 10%; /* Adjust based on the exact placement you want */
+}
+
+.searchIcon {
+  color: #ffffff;
+  position: absolute; /* Absolute position within the container */
+  left: 10px; /* Adjust this value to move the icon left or right */
+  height: 100%; /* Match height of the container */
+  display: flex;
+  align-items: center; /* Center the icon vertically */
+  z-index: 20;
+}
+
+.searchInput {
+  display: flex;
+  align-items: center;
+  position: relative; /* Ensure the container is positioned */
+  width: 400px; /* Increase width for a wider appearance */
+  height: 50px;
+  padding: 8px 16px;
+  padding-right: 280px;
+  border: 0.01px solid rgba(255, 254, 254, 0.247); /* More distinct border for a clear outline */
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.144); /* Lighter transparency for a glass effect */
+  backdrop-filter: blur(10px); /* Increased blur for a stronger frosted glass effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  color: #ffffff; /* White text color */
+  outline: none;
+  font-size: 16px;
+}
+
+.searchInput::placeholder {
+  color: #ffffff !important; 
+}
+
+.bellIcon {
+  color: #fff; /* White icon color */
+  margin-left: 40px; /* Space between search bar and bell icon */
+  font-size: 30px; /* Icon size */
+}
+
+.profileIcon {
+  width: 70px; /* Profile icon size */
+  height: 60px; /* Profile icon size */
+  background-color: #fff; /* White background for the icon */
+  border-radius: 50%; /* Makes it circular */
+  margin-left: 40px; /* Space between bell icon and profile icon */
+  background-image: url('/path/to/your/profile/image.jpg'); /* Path to your profile image */
+  background-size: cover;
+  background-position: center;
+}
+
+
+.mainContainer {
+  position: fixed;
+  top: 60px;
+  left: 260px;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  padding: 20px;
+  padding-top: 50px; /* Increase top padding to move content down */
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns content to the left */
+}
+
+/* Style for the Dashboard Title */
+.dashboardTitle {
+  width: 90%; /* Ensures the title spans most of the container width */
+  margin-bottom: 100px; /* Space between title and content */
+  font-size: 42px; /* Adjust font size as needed */
+  color: #fff; /* Adjust color as needed */
+  align-self: flex-start; /* Aligns the title to the left */
+  padding-left: 20px;
+}
+
+/* Style for the Power Curve Window */
+.powerCurveWindow {
+  width: 60%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 200px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for side-by-side components */
+.sideBySideComponents {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
 .componentWindow {
-  background-color: rgb(255, 255, 255); /* Lightly transparent background for components */
-  border-radius: 8px; /* Rounded corners for the window */
-  padding: 20px; /* Padding inside the component window */
-  margin-bottom: 20px; /* Space between each component window */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for depth and emphasis */
+  flex: 1;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 160px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.componentWindow:last-child {
+  margin-right: 0;
 }
 
 

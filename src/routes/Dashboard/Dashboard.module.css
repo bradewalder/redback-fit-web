@@ -227,6 +227,33 @@ body {
   margin-right: 0;
 }
 
+.calendarWindow{
+  flex: 1;
+  width: 10%;
+  height: 5%;
+  margin-left: 100px;
+  transform: skew(-20deg);
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 120px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.calendarWindowText{
+  transform: skew(20deg);
+  font-size: 16px;
+  color: #440b0b;
+  text-align: center;
+  
+}
+
+.powerCalSection{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
 
 /* Sample text styling within component windows */
 .componentText {

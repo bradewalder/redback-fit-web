@@ -18,9 +18,15 @@ const DashboardLanding: React.FC = () => {
                     <div className={styles.profileIcon} style={{ backgroundImage: `url(${ProfilePic})` }}></div>  
                 </div>
             </div>
-            <div className={styles.powerCurveWindow}>
-                <h3 className={styles.componentText}>Power Curve</h3>
-                <p className={styles.componentText}>Graph and data representing the power curve go here maybe?</p>
+            <div className={styles.powerCalSection}>
+                <div className={styles.powerCurveWindow}>
+                    <h3 className={styles.componentText}>Power Curve</h3>
+                    <p className={styles.componentText}>Graph and data representing the power curve go here maybe?</p>
+                </div>
+                <div className={styles.calendarWindow}>
+                    <h3 className={styles.calendarWindowText}>Calendar</h3>
+                    <p className={styles.calendarWindowText}>Widgets and text for date here</p>
+                </div>
             </div>
             <div className={styles.sideBySideComponents}>
                 <div className={styles.componentWindow}>

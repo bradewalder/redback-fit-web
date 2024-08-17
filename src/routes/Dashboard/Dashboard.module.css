@@ -197,34 +197,39 @@ body {
 
 /* Style for the Power Curve Window */
 .powerCurveWindow {
-  width: 60%;
+  width: 45%;
   background-color: rgb(255, 255, 255);
   border-radius: 8px;
   padding: 200px;
-  margin-bottom: 40px;
+  margin-bottom: 2%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Style for side-by-side components */
 .sideBySideComponents {
-  width: 70%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  
+  flex-direction: row;  /* Explicitly define as row for clarity */
+  justify-content: flex-start; /* Align components to the start of the container */
 }
 
-.componentWindow {
-  flex: 1;
+.VO2Window {
+  width: 30%;  /* Adjust to less than 50% to account for margin */
   background-color: rgb(255, 255, 255);
   border-radius: 8px;
-  padding: 160px;
+  padding: 150px;
   margin-bottom: 20px;
-  margin-right: 20px;
+  margin-right: 2%; /* Space between two components */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.componentWindow:last-child {
-  margin-right: 0;
+.PerformanceTipsWindow {
+  width: 10%;  /* Same as VO2 to maintain symmetry */
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 150px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 

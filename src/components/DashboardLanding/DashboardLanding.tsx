@@ -23,11 +23,11 @@ const DashboardLanding: React.FC = () => {
                 <p className={styles.componentText}>Graph and data representing the power curve go here maybe?</p>
             </div>
             <div className={styles.sideBySideComponents}>
-                <div className={styles.componentWindow}>
+                <div className={styles.VO2Window}>
                     <h3 className={styles.componentText}>VO2 Max</h3>
                     <p className={styles.componentText}>Detailed VO2 Max data here.</p>
                 </div>
-                <div className={styles.componentWindow}>
+                <div className={styles.PerformanceTipsWindow}>
                     <h3 className={styles.componentText}>Performance Tips</h3>
                     <p className={styles.componentText}>Performance enhancement tips here.</p>
                 </div>

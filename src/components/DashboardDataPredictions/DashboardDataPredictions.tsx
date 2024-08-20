@@ -92,7 +92,7 @@ const DashboardDataPredictions: React.FC = () => {
         <div className={styles.mainContainer}>  
             <h1 className={styles.chartTitle}>Data & Predictions</h1>
             <div className={styles.topSection}>
-                <p>Power Curve Data</p>
+                <p>Power Curve Data (Test Component for Old Backend)</p>
                 {powerCurveData ? (
                     <div className={styles.chartPlaceholder}>
                         <img src={powerCurveData} alt="Power Curve Data" />

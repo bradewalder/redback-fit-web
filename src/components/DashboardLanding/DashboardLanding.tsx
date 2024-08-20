@@ -3,7 +3,7 @@ import { HiBell } from "react-icons/hi2";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { FaCalendarAlt } from "react-icons/fa";
 import styles from '../../routes/Dashboard/Dashboard.module.css';
-import ProfilePic from '../../assets/Goku.png'; // Import profile picture
+import ProfilePic from '../../assets/ProfilePic.png'; // Import profile picture
 
 const DashboardLanding: React.FC = () => {
     return (

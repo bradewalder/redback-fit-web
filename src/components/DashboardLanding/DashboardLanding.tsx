@@ -2,7 +2,7 @@ import React from 'react';
 import { HiBell } from "react-icons/hi2";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import styles from '../../routes/Dashboard/Dashboard.module.css';
-import ProfilePic from '../../assets/Goku.png'; // Import profile picture
+import ProfilePic from '../../assets/ProfilePic.png'; // Import profile picture
 
 const DashboardLanding: React.FC = () => {
     return (

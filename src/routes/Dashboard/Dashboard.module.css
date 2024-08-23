@@ -5,7 +5,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #681111e8; 
+  background: linear-gradient(to left, #83010c, #59363e) ; 
   color: #dddddd; 
   font-family: 'Montserrat', sans-serif;
 }
@@ -195,6 +195,18 @@ body {
   padding-left: 20px;
 }
 
+/* Positioning for container that contains power curve, calendar and v02 */
+.powerCalSection{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Container within the main container to be able to stack calendaron vo2 */
+.calV02Box{
+  flex-direction: column;
+  justify-content: space-between;
+}
 /* Style for the Power Curve Window */
 .powerCurveWindow {
   width: 45%;
@@ -231,6 +243,66 @@ body {
   margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
+.calendarWindow{
+  flex: 1;
+  align-self: baseline;
+  width: 40%;
+  height: 1%;
+  margin-left: 100px;
+  transform: skew(-20deg);
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 120px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.v02Window{
+  flex: 1;
+  align-self: baseline;
+  width: 40%;
+  height: 10%;
+  margin-left: 60px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 120px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.calendarWindowText{
+  
+  font-size: 16px;
+  color: #440b0b;
+  text-align: center;
+  
+}
+
+.calIcon{
+  width: 15%;
+  height: 15%;
+  position: fixed;
+  top: 20px;
+  bottom: 20px;
+  right: 50px;
+  color: #c20000;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid grey;
+  padding: 10px;
+}
+
+.calendarWindow h3{
+  position: fixed;
+  left: 50px;
+  top: 20px;
+}
+
+.calendarWindow p {
+  align-items: center;
+}
+
 
 
 /* Sample text styling within component windows */

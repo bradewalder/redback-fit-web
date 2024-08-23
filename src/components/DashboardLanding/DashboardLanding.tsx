@@ -1,6 +1,7 @@
 import React from 'react';
 import { HiBell } from "react-icons/hi2";
 import { FaMagnifyingGlass } from "react-icons/fa6";
+import { FaCalendarAlt } from "react-icons/fa";
 import styles from '../../routes/Dashboard/Dashboard.module.css';
 import ProfilePic from '../../assets/ProfilePic.png'; // Import profile picture
 
@@ -18,14 +19,26 @@ const DashboardLanding: React.FC = () => {
                     <div className={styles.profileIcon} style={{ backgroundImage: `url(${ProfilePic})` }}></div>  
                 </div>
             </div>
-            <div className={styles.powerCurveWindow}>
-                <h3 className={styles.componentText}>Power Curve</h3>
-                <p className={styles.componentText}>Graph and data representing the power curve go here maybe?</p>
+            <div className={styles.powerCalSection}>
+                <div className={styles.powerCurveWindow}>
+                    <h3 className={styles.componentText}>Power Curve</h3>
+                    <p className={styles.componentText}>Graph and data representing the power curve go here maybe?</p>
+                </div>
+                <div className={styles.calV02Box}>
+                    <div className={styles.calendarWindow}>
+                        <FaCalendarAlt className={styles.calIcon} />
+                        <h3 className={styles.calendarWindowText}>Day name</h3>
+                        <p className={styles.calendarWindowText}>Date will go here</p>
+                    </div>
+                    <div className={styles.v02Window}>
+                        <h3 className={styles.componentText}>V02 Max</h3>
+                    </div>
+                </div>
             </div>
             <div className={styles.sideBySideComponents}>
-                <div className={styles.VO2Window}>
-                    <h3 className={styles.componentText}>VO2 Max</h3>
-                    <p className={styles.componentText}>Detailed VO2 Max data here.</p>
+                <div className={styles.componentWindow}>
+                    <h3 className={styles.componentText}>Sessions Profile</h3>
+                    <p className={styles.componentText}>Coach and Session Details here.</p>
                 </div>
                 <div className={styles.PerformanceTipsWindow}>
                     <h3 className={styles.componentText}>Performance Tips</h3>

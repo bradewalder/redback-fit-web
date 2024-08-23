@@ -40,7 +40,7 @@ const DashboardLanding: React.FC = () => {
                     <h3 className={styles.componentText}>Sessions Profile</h3>
                     <p className={styles.componentText}>Coach and Session Details here.</p>
                 </div>
-                <div className={styles.componentWindow}>
+                <div className={styles.PerformanceTipsWindow}>
                     <h3 className={styles.componentText}>Performance Tips</h3>
                     <p className={styles.componentText}>Performance enhancement tips here.</p>
                 </div>

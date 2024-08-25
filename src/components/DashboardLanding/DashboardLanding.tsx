@@ -7,7 +7,7 @@ import ProfilePic from '../../assets/ProfilePic.png'; // Import profile picture
 
 const DashboardLanding: React.FC = () => {
     return (
-        <main className={styles.mainContainer}>
+        <main className={styles.mainContainerLanding}>
             <div className={styles.topBar}>
                 <h1 className={styles.dashboardTitle}>Welcome Athlete!</h1>
                 <div className={styles.searchAndIcons}>
@@ -30,13 +30,13 @@ const DashboardLanding: React.FC = () => {
                         <h3 className={styles.calendarWindowText}>Day name</h3>
                         <p className={styles.calendarWindowText}>Date will go here</p>
                     </div>
-                    <div className={styles.v02Window}>
+                    <div className={styles.VO2Window}>
                         <h3 className={styles.componentText}>V02 Max</h3>
                     </div>
                 </div>
             </div>
             <div className={styles.sideBySideComponents}>
-                <div className={styles.componentWindow}>
+                <div className={styles.SessionsProfileWindow}>
                     <h3 className={styles.componentText}>Sessions Profile</h3>
                     <p className={styles.componentText}>Coach and Session Details here.</p>
                 </div>

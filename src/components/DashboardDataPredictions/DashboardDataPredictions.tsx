@@ -89,7 +89,7 @@ const DashboardDataPredictions: React.FC = () => {
     );
 
     return (
-        <div className={styles.mainContainer}>  
+        <div className={styles.mainContainerDataPred}>  
             <h1 className={styles.chartTitle}>Data & Predictions</h1>
             <div className={styles.topSection}>
                 <p>Power Curve Data (Test Component for Old Backend)</p>

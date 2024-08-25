@@ -169,10 +169,8 @@ body {
   background-position: center;
 }
 
-
-.mainContainer {
+.mainContainerLanding {
   position: fixed;
-  top: 60px;
   left: 260px;
   right: 0;
   bottom: 0;
@@ -188,7 +186,7 @@ body {
 /* Style for the Dashboard Title */
 .dashboardTitle {
   width: 90%; /* Ensures the title spans most of the container width */
-  margin-bottom: 100px; /* Space between title and content */
+  margin-bottom: 50px; /* Space between title and content */
   font-size: 42px; /* Adjust font size as needed */
   color: #fff; /* Adjust color as needed */
   align-self: flex-start; /* Aligns the title to the left */
@@ -225,31 +223,32 @@ body {
   justify-content: flex-start; /* Align components to the start of the container */
 }
 
-.VO2Window {
-  width: 30%;  /* Adjust to less than 50% to account for margin */
-  background-color: rgb(255, 255, 255);
-  border-radius: 8px;
-  padding: 150px;
-  margin-bottom: 20px;
-  margin-right: 2%; /* Space between two components */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
 
 .PerformanceTipsWindow {
-  width: 10%;  /* Same as VO2 to maintain symmetry */
+  width: 15%;  
   background-color: rgb(255, 255, 255);
   border-radius: 8px;
   padding: 150px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.calendarWindow{
+.SessionsProfileWindow {
+  width: 20%;  
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 150px;
+  margin-bottom: 40px;
+  margin-right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.calendarWindow {
   flex: 1;
   align-self: baseline;
   width: 40%;
   height: 1%;
-  margin-left: 100px;
+  margin-left: 60px;  
   transform: skew(-20deg);
   background-color: rgb(255, 255, 255);
   border-radius: 8px;
@@ -258,16 +257,15 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.v02Window{
+.VO2Window {
   flex: 1;
   align-self: baseline;
   width: 40%;
   height: 10%;
-  margin-left: 60px;
+  margin-left: 60px;  
   background-color: rgb(255, 255, 255);
   border-radius: 8px;
   padding: 120px;
-  margin-bottom: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -333,6 +331,28 @@ body {
 
 
 /* Top Section for Power Curve Data Visualization (Data & Predictions Test Page*/
+
+.mainContainerDataPred {
+  /* Removed position: fixed and related properties */
+  overflow-y: auto;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px; /* Adds top space similar to 'top: 150px;' in fixed positioning */
+  width: 100%; /* Full width if needed, adjust as necessary */
+}
+
+
+.chartTitle {
+  width: 90%; /* Ensures the title spans most of the container width */
+  margin-bottom: 10px; /* Space between title and content */
+  font-size: 42px; /* Adjust font size as needed */
+  color: #fff; /* Adjust color as needed */
+  align-self: flex-start; /* Aligns the title to the left */
+  padding-left: 12%;
+}
+
+
 .topSection {
   padding: 20px;
   background-color: #2a2f33; 

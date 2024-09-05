@@ -1,9 +1,16 @@
-import React from 'react';
-import { HiBell } from "react-icons/hi2";
-import { FaMagnifyingGlass } from "react-icons/fa6";
-import { FaCalendarAlt } from "react-icons/fa";
+import * as React from 'react';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
+import { HiBell } from "react-icons/hi";  
+import { FaMagnifyingGlass } from "react-icons/fa6"; 
 import styles from '../../routes/Dashboard/Dashboard.module.css';
 import ProfilePic from '../../assets/ProfilePic.png'; // Import profile picture
+import { Gauge } from '@mui/x-charts-pro';
+import Stack from '@mui/material/Stack';
+import { LineChart } from '@mui/x-charts/LineChart';
+
+
 
 const DashboardLanding: React.FC = () => {
     return (
@@ -22,16 +29,25 @@ const DashboardLanding: React.FC = () => {
             <div className={styles.powerCalSection}>
                 <div className={styles.powerCurveWindow}>
                     <h3 className={styles.componentText}>Power Curve</h3>
-                    <p className={styles.componentText}>Graph and data representing the power curve go here maybe?</p>
+                    <p className={styles.componentText}>Graph and data representing the power curve go here</p>
+                    <LineChart
+                     xAxis={[{ data: [1, 2, 3, 4, 5, 6] }]}  
+                     series={[{
+                       data: [0, 1, 3, 5.5, 7, 10]  
+                     }]}
+                    />
                 </div>
                 <div className={styles.calV02Box}>
                     <div className={styles.calendarWindow}>
-                        <FaCalendarAlt className={styles.calIcon} />
-                        <h3 className={styles.calendarWindowText}>Day name</h3>
-                        <p className={styles.calendarWindowText}>Date will go here</p>
+                        <LocalizationProvider dateAdapter={AdapterDayjs}>
+                            <DateCalendar />
+                        </LocalizationProvider>
                     </div>
                     <div className={styles.VO2Window}>
-                        <h3 className={styles.componentText}>V02 Max</h3>
+                        <h3 className={styles.componentTextVO2}>V02 Max</h3>
+                        <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 1, md: 3 }}>
+                        <Gauge width={100} height={100} value={70} />
+                    </Stack>
                     </div>
                 </div>
             </div>

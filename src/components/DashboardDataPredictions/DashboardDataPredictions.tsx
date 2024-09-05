@@ -4,6 +4,10 @@ import * as XLSX from 'xlsx';
 import styles from '../../routes/Dashboard/Dashboard.module.css';
 import { FaFileAlt } from 'react-icons/fa';
 
+// Please note this is simply a testing page.
+
+
+
 type DataType = { [key: string]: any }; 
 
 const DashboardDataPredictions: React.FC = () => {

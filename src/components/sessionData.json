@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "coach": "Sarah Eastern",
+        "duration": "1 Hour",
+        "date": "2023/09/17",
+        "typeOfTraining": "Strengt Training"
+    },
+    {
+        "id": 2,
+        "coach": "Sarah Eastern",
+        "duration": "1.5 Hours",
+        "date": "2023/10/17",
+        "typeOfTraining": "Cardio Workout" 
+    },
+    {
+        "id": 3,
+        "coach": "Sarah Eastern",
+        "duration": "1 Hour",
+        "date": "2023/11/17",
+        "typeOfTraining": "Flexibility"
+    },
+    {
+        "id": 4,
+        "coach": "Sarah Eastern",
+        "duration": "2 Hours",
+        "date": "2023/12/17",
+        "typeOfTraining": "Team Practice"
+    }
+]

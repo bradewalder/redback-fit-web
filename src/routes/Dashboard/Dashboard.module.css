@@ -193,8 +193,8 @@ body {
   padding-left: 20px;
 }
 
-/* Positioning for container that contains power curve, calendar and v02 */
-.powerCalSection{
+/* Positioning for container that contains heart rate, calendar and v02 */
+.heartRateCalSection{
   width: 90%;
   display: flex;
   justify-content: space-between;
@@ -209,8 +209,8 @@ body {
   margin-left: 2.5%;
 }
 
-/* Style for the Power Curve Window */
-.powerCurveWindow {
+/* Style for the Heart Rate Window */
+.heartRateWindow {
   width: 75%;
   background-color: rgb(255, 255, 255);
   border-radius: 8px;

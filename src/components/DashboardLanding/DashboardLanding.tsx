@@ -11,7 +11,6 @@ import Stack from '@mui/material/Stack';
 import { LineChart } from '@mui/x-charts/LineChart';
 
 
-
 const DashboardLanding: React.FC = () => {
     return (
         <main className={styles.mainContainerLanding}>
@@ -26,10 +25,10 @@ const DashboardLanding: React.FC = () => {
                     <div className={styles.profileIcon} style={{ backgroundImage: `url(${ProfilePic})` }}></div>  
                 </div>
             </div>
-            <div className={styles.powerCalSection}>
-                <div className={styles.powerCurveWindow}>
-                    <h3 className={styles.componentText}>Power Curve</h3>
-                    <p className={styles.componentText}>Graph and data representing the power curve go here</p>
+            <div className={styles.heartRateCalSection}>
+                <div className={styles.heartRateWindow}>
+                    <h3 className={styles.componentText}>Heart Rate</h3>
+                    <p className={styles.componentText}>Graph and test data representing Heart Rate</p>
                     <LineChart
                      xAxis={[{ data: [1, 2, 3, 4, 5, 6] }]}  
                      series={[{

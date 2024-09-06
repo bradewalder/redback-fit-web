@@ -275,6 +275,74 @@ body {
   margin-bottom: 40px;
 }
 
+.calIcon{
+  width: 15%;
+  height: 15%;
+  position: fixed;
+  top: 20px;
+  bottom: 20px;
+  right: 50px;
+  color: #c20000;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid grey;
+  padding: 10px;
+}
+
+.calendarWindow h3{
+  position: fixed;
+  left: 50px;
+  top: 20px;
+}
+
+.calendarWindow p {
+  align-items: center;
+}
+
+.SessionsProfileWindow h1{
+  color: #c20000;
+}
+
+
+.SessionsProfileWindow table{
+  table-layout: fixed;
+  width: 100%;
+  align-content: flex-start;
+  left: 15px;
+  background-color: #440b0b;
+}
+
+.SessionsProfileWindow tbody{
+  background:#c20000;
+  color: #c20000;
+  
+}
+
+.SessionsProfileWindow td{
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  width: 125%;
+  font-size: 17px;
+  margin-right: 40px;
+
+}
+
+.SessionsProfileWindow th{
+  color: black;
+}
+
+.sort-button{
+  background-color: transparent;
+  border: none;
+  padding: 5px 10px;
+  margin: 0;
+  line-height: 1;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+
+}
 
 /* Sample text styling within component windows */
 .componentText {

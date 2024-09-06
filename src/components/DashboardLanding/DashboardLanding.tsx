@@ -6,13 +6,18 @@ import { HiBell } from "react-icons/hi";
 import { FaMagnifyingGlass } from "react-icons/fa6"; 
 import styles from '../../routes/Dashboard/Dashboard.module.css';
 import ProfilePic from '../../assets/ProfilePic.png'; // Import profile picture
+import SessionTable from '../SessionsTable/SessionsTable';
+import data from '../sessionData.json';
 import { Gauge } from '@mui/x-charts-pro';
 import Stack from '@mui/material/Stack';
 import { LineChart } from '@mui/x-charts/LineChart';
+import RadarChart from '../RadarChart/RadarChart';  // Adjust the path as needed
 
 
 
 const DashboardLanding: React.FC = () => {
+    
+   
     return (
         <main className={styles.mainContainerLanding}>
             <div className={styles.topBar}>
@@ -26,10 +31,10 @@ const DashboardLanding: React.FC = () => {
                     <div className={styles.profileIcon} style={{ backgroundImage: `url(${ProfilePic})` }}></div>  
                 </div>
             </div>
-            <div className={styles.powerCalSection}>
-                <div className={styles.powerCurveWindow}>
-                    <h3 className={styles.componentText}>Power Curve</h3>
-                    <p className={styles.componentText}>Graph and data representing the power curve go here</p>
+            <div className={styles.heartRateCalSection}>
+                <div className={styles.heartRateWindow}>
+                    <h3 className={styles.componentText}>Heart Rate</h3>
+                    <p className={styles.componentText}>Graph and test data representing Heart Rate</p>
                     <LineChart
                      xAxis={[{ data: [1, 2, 3, 4, 5, 6] }]}  
                      series={[{
@@ -53,12 +58,16 @@ const DashboardLanding: React.FC = () => {
             </div>
             <div className={styles.sideBySideComponents}>
                 <div className={styles.SessionsProfileWindow}>
-                    <h3 className={styles.componentText}>Sessions Profile</h3>
-                    <p className={styles.componentText}>Coach and Session Details here.</p>
+                    <h1>Your Sessions</h1>
+                    <SessionTable data ={data}>
+                    </SessionTable>
                 </div>
                 <div className={styles.PerformanceTipsWindow}>
                     <h3 className={styles.componentText}>Performance Tips</h3>
                     <p className={styles.componentText}>Performance enhancement tips here.</p>
+                </div>
+                <div className={styles.radarChart}>
+                    <RadarChart  />
                 </div>
             </div>
         </main>

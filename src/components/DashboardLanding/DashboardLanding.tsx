@@ -11,10 +11,11 @@ import data from '../sessionData.json';
 import { Gauge } from '@mui/x-charts-pro';
 import Stack from '@mui/material/Stack';
 import { LineChart } from '@mui/x-charts/LineChart';
+import RadarChart from '../RadarChart/RadarChart';  // Adjust the path as needed
+
 
 
 const DashboardLanding: React.FC = () => {
-    
     
    
     return (
@@ -64,6 +65,9 @@ const DashboardLanding: React.FC = () => {
                 <div className={styles.PerformanceTipsWindow}>
                     <h3 className={styles.componentText}>Performance Tips</h3>
                     <p className={styles.componentText}>Performance enhancement tips here.</p>
+                </div>
+                <div className={styles.radarChart}>
+                    <RadarChart  />
                 </div>
             </div>
         </main>

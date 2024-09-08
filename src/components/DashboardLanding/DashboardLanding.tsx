@@ -7,7 +7,7 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 import styles from '../../routes/Dashboard/Dashboard.module.css';
 import ProfilePic from '../../assets/ProfilePic.png'; // Import profile picture
 import SessionTable from '../SessionsTable/SessionsTable';
-import data from '../sessionData.json';
+import data from '../SessionsTable/sessionData.json';
 import { Gauge } from '@mui/x-charts-pro';
 import Stack from '@mui/material/Stack';
 import { LineChart } from '@mui/x-charts/LineChart';

@@ -110,6 +110,10 @@
 				"extension": ["js", "ts"]
 			},
 			{
+				"name": "jest.utils",
+				"extension": ["ts", "tsx"]
+			},
+			{
 				"name": "LICENSE"
 			},
 			{
@@ -143,6 +147,10 @@
 			{
 				"name": "vite.config",
 				"extension": ["ts"]
+			},
+			{
+				"name": "pull_request_template",
+				"extension": ["md"]
 			}
         ]
     }

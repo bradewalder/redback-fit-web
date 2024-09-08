@@ -1,3 +1,4 @@
+// If not already correctly set, adjust the styled components for layout.
 import { FC } from 'react';
 import { GlobalHeader, RootWrapper } from './Root.style';
 import { Link, Outlet, useRouteError } from 'react-router-dom';
@@ -10,12 +11,14 @@ const Root: FC = () => {
 		<RootWrapper data-testid="Root">
 			<GlobalHeader data-testid="GlobalHeader">
 				<ul>
-					<li><Link to="/">Home</Link></li>
-					<li><Link to="/about">About</Link></li>
+					{/* <li><Link to="/"></Link></li> */}
+					{/* <li><Link to="/about">About</Link></li>
 					<li><Link to="/contact">Contact</Link></li>
+					<li><Link to="/login">Login</Link></li>
+					<li><Link to="/dashboard">Dashboard</Link></li> */}
 				</ul>
 			</GlobalHeader>
-			{error ? <ErrorPage/> : <Outlet/>}
+			{error ? <ErrorPage /> : <Outlet />}
 		</RootWrapper>
 	);
 };

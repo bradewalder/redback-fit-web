@@ -1,26 +1,22 @@
 import React from "react";
 import Logo from "../../../assets/Logo.svg";
 import { Link } from 'react-router-dom';
+import styles from "../../../routes//HomePage//HomePage.module.css"
 
 const Navbar = () => {
   return (
-    <nav>
-      <div className="nav-logo-container">
+    <nav className={styles.nav}>
+      <div className={styles['nav-logo-container']}>
         <img
           src={Logo}
           alt="Logo"
-          style={{
-            width: '100px',      
-            height: '100px',     
-            borderRadius: '100%' 
-          }}
+          className={styles['nav-logo']}
         />
       </div>
-
-      <div className="navbar-links-container">
-        <a href="/">Home</a>
-        <Link to="/dashboard">Dashboard</Link>
-        <Link to="/login" className="primary-button">Sign In</Link>
+      <div className={styles['navbar-links-container']}>
+        <a href="/" className={styles.link}>Home</a>
+        <Link to="/dashboard" className={styles.link}>Dashboard</Link>
+        <Link to="/login" className={styles['primary-button']}>Sign In</Link>
       </div>
     </nav>
   );

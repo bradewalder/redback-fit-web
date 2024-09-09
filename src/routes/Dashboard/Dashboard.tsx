@@ -1,18 +1,29 @@
-import './Dashboard.module.css';
-import DashboardHeader from '../../components/DashboardHeader/DashboardHeader.tsx';
-import DashboardSidebar from '../../components/DashboardSidebar/DashboardSidebar.tsx';
+import React, { useEffect } from 'react';
+import styles from './Dashboard.module.css';
+import DashboardHeader from '../../components/DashboardHeader/DashboardHeader';
+import DashboardSidebar from '../../components/DashboardSidebar/DashboardSidebar';
 import { Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
-	return (
-		<div className="dashboard-container">
-			<DashboardSidebar />
-			<div className="dashboard-content">
-				<DashboardHeader />
-				<Outlet/>
-			</div>
-		</div>
-	);
+  useEffect(() => {
+    // Set the body background color when the Dashboard mounts
+    document.body.style.backgroundColor = '#ad2c2c';
+
+    // Reset the background color when the Dashboard unmounts
+    return () => {
+      document.body.style.backgroundColor = '';  // Reset to default or a specific color
+    };
+  }, []);
+
+  return (
+    <div className={styles.dashboardContainer}>
+      <DashboardSidebar />
+      <div className={styles.dashboardContent}>
+        <DashboardHeader />
+        <Outlet/>
+      </div>
+    </div>
+  );
 };
 
 export default Dashboard;

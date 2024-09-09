@@ -1,5 +1,5 @@
 import { MouseEventHandler, useCallback, useState } from "react";
-import data from "../sessionData.json";
+import data from "../SessionsTable/sessionData.json";
 
 
 type Data = typeof data;

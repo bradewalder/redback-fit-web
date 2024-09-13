@@ -21,7 +21,7 @@
   body {
     max-width: 100%;
     overflow-x: hidden;
-    background-color: #eecdc7; 
+    background-color: #212A31; 
   }
   
   nav {
@@ -42,7 +42,7 @@
   }
   .primary-button {
     padding: 0.9rem 1.75rem;
-    background-color: #e97462;
+    background-color: #748d92;
     outline: none;
     border: none;
     border-radius: 5rem;
@@ -91,19 +91,19 @@
   }
   .primary-heading {
     font-size: clamp(2rem, 5vw, 4rem);
-    color:  #0e080e;
+    color:  white;
     /* line-height: 5rem; */
     max-width: 600px;
   }
   .primary-text {
     font-size: clamp(1rem, 3vw, 1.5rem);
     max-width: 500px;
-    color:  #0e080e;
+    color:    white;
     margin: 1.5rem 0rem;
   }
   .secondary-button {
     padding: 1rem 2.5rem;
-    background-color: #e97462;
+    background-color: #748d92;
     outline: none;
     border: none;
     border-radius: 5rem;
@@ -153,7 +153,7 @@
   }
   .primary-subheading {
     font-weight: 700;
-    color: #e97462;
+    color: #748d92;
     font-size: 1.15rem;
   }
   .about-buttons-container {
@@ -240,7 +240,7 @@
   .footer-section-columns span {
     margin: 0.25rem 0rem;
     font-weight: 600;
-    color: #4c4c4c;
+    color: white;
     cursor: pointer;
   }
   .testimonial-section-bottom {

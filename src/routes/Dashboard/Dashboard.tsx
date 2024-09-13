@@ -7,7 +7,7 @@ import { Outlet } from 'react-router-dom';
 const Dashboard = () => {
   useEffect(() => {
     // Set the body background color when the Dashboard mounts
-    document.body.style.backgroundColor = '#ad2c2c';
+    document.body.style.backgroundColor = '#212A31' ;
 
     // Reset the background color when the Dashboard unmounts
     return () => {

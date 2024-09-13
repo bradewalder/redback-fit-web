@@ -11,6 +11,7 @@ const LoginPage: React.FC = () => {
 	const handleClickSignInButton = () => setRightPanelActive(false);
 
 	useEffect(() => {
+
 		const style = document.createElement('style');
 		style.innerHTML = `
             @keyframes gradientAnimation {
@@ -27,7 +28,7 @@ const LoginPage: React.FC = () => {
 
             body {
                 animation: gradientAnimation 20s ease infinite;
-                background: linear-gradient(to right, #0a0f0b, #8a1c35);
+                background: linear-gradient(to right, #212A31, #2e3944);
                 background-size: 200% 200%;
             }
 

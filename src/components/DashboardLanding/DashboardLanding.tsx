@@ -18,38 +18,17 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const DashboardLanding: React.FC = () => {
 
-    const theme = createTheme({
-        components: {
-          MuiPickersDay: {
-            styleOverrides: {
-              root: {
-                color: 'white', // Set the date digits to white
-              },
-            },
-          },
-          MuiPickersArrowSwitcher: {
-            styleOverrides: {
-              root: {
-                color: 'white', // Set the arrow color to white
-              },
-            },
-          },
-          MuiIconButton: {
-            styleOverrides: {
-              root: {
-                color: 'white', // Set the arrow button icon color to white
-              },
-            },
-          },
-          MuiPickersCalendarHeader: {
-            styleOverrides: {
-              weekDayLabel: {
-                color: 'white', // Set the days of the week (e.g., Mon, Tue) to white
-              },
-            },
+  const theme = createTheme({
+    components: {
+      MuiIconButton: {
+        styleOverrides: {
+          root: {
+            color: 'white', 
           },
         },
-      });
+      },
+    },
+  });
 
       
    

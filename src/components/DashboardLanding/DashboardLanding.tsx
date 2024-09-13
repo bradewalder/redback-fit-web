@@ -12,11 +12,46 @@ import { Gauge } from '@mui/x-charts-pro';
 import Stack from '@mui/material/Stack';
 import { LineChart } from '@mui/x-charts/LineChart';
 import RadarChart from '../RadarChart/RadarChart';  // Adjust the path as needed
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
 
 const DashboardLanding: React.FC = () => {
-    
+
+    const theme = createTheme({
+        components: {
+          MuiPickersDay: {
+            styleOverrides: {
+              root: {
+                color: 'white', // Set the date digits to white
+              },
+            },
+          },
+          MuiPickersArrowSwitcher: {
+            styleOverrides: {
+              root: {
+                color: 'white', // Set the arrow color to white
+              },
+            },
+          },
+          MuiIconButton: {
+            styleOverrides: {
+              root: {
+                color: 'white', // Set the arrow button icon color to white
+              },
+            },
+          },
+          MuiPickersCalendarHeader: {
+            styleOverrides: {
+              weekDayLabel: {
+                color: 'white', // Set the days of the week (e.g., Mon, Tue) to white
+              },
+            },
+          },
+        },
+      });
+
+      
    
     return (
         <main className={styles.mainContainerLanding}>
@@ -44,9 +79,11 @@ const DashboardLanding: React.FC = () => {
                 </div>
                 <div className={styles.calV02Box}>
                     <div className={styles.calendarWindow}>
+                    <ThemeProvider theme={theme}>
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
                             <DateCalendar />
                         </LocalizationProvider>
+                        </ThemeProvider>
                     </div>
                     <div className={styles.VO2Window}>
                         <h3 className={styles.componentTextVO2}>V02 Max</h3>
@@ -63,8 +100,8 @@ const DashboardLanding: React.FC = () => {
                     </SessionTable>
                 </div>
                 <div className={styles.PerformanceTipsWindow}>
-                    <h3 className={styles.componentText}>Performance Tips</h3>
-                    <p className={styles.componentText}>Performance enhancement tips here.</p>
+                    <h1>Performance Tips</h1>
+                    <p className={styles.componentText}>Train with purpose, fuel for performance, and perfect your technique</p>
                 </div>
                 <div className={styles.radarChart}>
                     <RadarChart  />

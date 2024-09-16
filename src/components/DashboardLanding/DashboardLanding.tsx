@@ -12,11 +12,25 @@ import { Gauge } from '@mui/x-charts-pro';
 import Stack from '@mui/material/Stack';
 import { LineChart } from '@mui/x-charts/LineChart';
 import RadarChart from '../RadarChart/RadarChart';  // Adjust the path as needed
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
 
 const DashboardLanding: React.FC = () => {
-    
+
+  const theme = createTheme({
+    components: {
+      MuiIconButton: {
+        styleOverrides: {
+          root: {
+            color: 'white', 
+          },
+        },
+      },
+    },
+  });
+
+      
    
     return (
         <main className={styles.mainContainerLanding}>
@@ -44,9 +58,11 @@ const DashboardLanding: React.FC = () => {
                 </div>
                 <div className={styles.calV02Box}>
                     <div className={styles.calendarWindow}>
+                    <ThemeProvider theme={theme}>
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
                             <DateCalendar />
                         </LocalizationProvider>
+                        </ThemeProvider>
                     </div>
                     <div className={styles.VO2Window}>
                         <h3 className={styles.componentTextVO2}>V02 Max</h3>

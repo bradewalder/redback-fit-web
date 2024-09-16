@@ -24,7 +24,7 @@ const Home = () => {
           </button>
         </div>
         <div className={styles['home-image-section']}>
-          <img src="https://runningmagazine.ca/wp-content/uploads/2016/11/Morning-Run-Female.jpg" alt="" />
+          <img src="https://honehealth.com/wp-content/uploads/2023/04/Muscles_Worked-Running-1.webp" alt="" />
         </div>
       </div>
     </div>

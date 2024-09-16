@@ -2,13 +2,13 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from '../../routes/Dashboard/Dashboard.module.css';
 import { BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsMenuButtonWideFill, BsFillGearFill, BsTable } from 'react-icons/bs';
-import logoImage from '../../assets/Redback logo.png'; // Ensure the path is correct
+import Logo from '../../assets/Logo.svg'; // Ensure the path is correct
 
 const Sidebar: React.FC = () => {
     return (
         <aside className={styles.sidebar}>
             <div className={styles.logo}>
-                <img src={logoImage} alt="Logo" className={styles.logoImage} />
+                <img src={Logo} alt="Logo" className={styles.logoImage} />
             </div>
             <div className={styles.title}>
                 Redback Operations

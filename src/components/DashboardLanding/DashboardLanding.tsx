@@ -65,7 +65,11 @@ const DashboardLanding: React.FC = () => {
                 <div className={styles.PerformanceTipsWindow}>
                     <h3 className={styles.componentText}>Performance Tips</h3>
                     <ul>
-                        
+                        <li>Hydrate</li>
+                        <li>Be Consistent</li>
+                        <li>Set Goals</li>
+                        <li>Have a Motive</li>
+                        <li>Prioritise Sleep</li>
                     </ul>
                 </div>
                 <div className={styles.radarChart}>

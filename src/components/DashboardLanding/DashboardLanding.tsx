@@ -79,8 +79,14 @@ const DashboardLanding: React.FC = () => {
                     </SessionTable>
                 </div>
                 <div className={styles.PerformanceTipsWindow}>
-                    <h1>Performance Tips</h1>
-                    <p className={styles.componentText}>Train with purpose, fuel for performance, and perfect your technique</p>
+                    <h3 className={styles.componentText}>Performance Tips</h3>
+                    <ul>
+                        <li>Hydrate</li>
+                        <li>Be Consistent</li>
+                        <li>Set Goals</li>
+                        <li>Have a Motive</li>
+                        <li>Prioritise Sleep</li>
+                    </ul>
                 </div>
                 <div className={styles.radarChart}>
                     <RadarChart  />

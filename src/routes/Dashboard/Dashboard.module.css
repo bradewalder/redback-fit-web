@@ -172,7 +172,7 @@ body {
   position: fixed;
   left: 260px;
   right: 4%;
-  top: 6%;
+  top: 5%;
   overflow-y: auto;
   padding: 20px;
   z-index: 500;
@@ -225,7 +225,7 @@ body {
   transition: 1s; /* Center-align children horizontally */
 }
 .heartRateWindow:hover{
-  transform:scale(1.05);
+  transform:scale(1.01);
   background: #ebebeb;
   box-shadow: 2px 2px 2px #000;
   z-index: 2;
@@ -253,7 +253,7 @@ body {
 }
 
 .SessionsProfileWindow:hover{
-  transform:scale(1.05);
+  transform:scale(1.01);
   background: #ebebeb;
   box-shadow: 2px 2px 2px #000;
   z-index: 2;
@@ -272,7 +272,7 @@ body {
 }
 
 .PerformanceTipsWindow:hover{
-  transform:scale(1.05);
+  transform:scale(1.01);
   background: #ebebeb;
   box-shadow: 2px 2px 2px #000;
   z-index: 2;
@@ -289,7 +289,13 @@ body {
 
 }
 
+.radarChart:hover {
+  transform:scale(1.01);
+  background: #ebebeb;
+  box-shadow: 2px 2px 2px #000;
+  z-index: 2;
 
+}
 
 .componentTextVO2{
   font-size: 18px; 
@@ -312,7 +318,7 @@ body {
 }
 
 .VO2Window:hover{
-  transform:scale(1.05);
+  transform:scale(1.01);
   background: #ebebeb;
   box-shadow: 2px 2px 2px #000;
   z-index: 2;
@@ -327,7 +333,7 @@ body {
   transition: 1s;
 }
 .calendarWindow:hover{
-  transform:scale(1.05);
+  transform:scale(1.01);
   background: #ebebeb;
   box-shadow: 2px 2px 2px #000;
   z-index: 2;

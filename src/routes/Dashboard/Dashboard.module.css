@@ -1,6 +1,9 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
+/* IMPORTANT NOTE! Some of these CSS naming conventions clash with / share the same global name to some elements in Login.style.css.
+Perhaps look into fixing / changing these names if you notice elements unintentionally changing on the Login Page. i.e, .body, .formcontainer etc */
+
 /* Reset and Base Styles */
 body {
   margin: 0;

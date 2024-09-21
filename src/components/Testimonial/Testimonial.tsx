@@ -1,6 +1,6 @@
 import React from 'react';
 import { AiFillStar } from 'react-icons/ai';
-import styles from '../../../routes//HomePage//HomePage.module.css';
+import styles from '../../routes/HomePage/HomePage.module.css';
 
 const Testimonial = () => {
 	return (

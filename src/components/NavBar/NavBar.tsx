@@ -1,7 +1,6 @@
-import React from 'react';
-import Logo from '../../../assets/Logo.svg';
+import Logo from '../../assets/Logo.svg';
 import { Link } from 'react-router-dom';
-import styles from '../../../routes//HomePage//HomePage.module.css';
+import styles from '../../routes/HomePage/HomePage.module.css';
 
 const Navbar = () => {
 	return (

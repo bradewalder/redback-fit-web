@@ -1,5 +1,4 @@
-import React from 'react';
-import styles from '../../../routes/HomePage/HomePage.module.css'; 
+import styles from '../../routes/HomePage/HomePage.module.css';
 
 const Contact = () => {
 	return (

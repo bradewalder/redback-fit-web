@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import styles from './HomePage.module.css';
-import Home from '../../components/HomePageSections/Home/Home';
-import About from '../../components/HomePageSections/About/About';
-import Work from '../../components/HomePageSections/Work/Work';
-import Testimonial from '../../components/HomePageSections/Testimonial/Testimonial';
-import Contact from '../../components/HomePageSections/Contact/Contact';
-import Footer from '../../components/HomePageSections/Footer/Footer';
+import Home from '../../components/Home/Home.tsx';
+import About from '../../components/About/About.tsx';
+import Work from '../../components/Work/Work.tsx';
+import Testimonial from '../../components/Testimonial/Testimonial.tsx';
+import Contact from '../../components/Contact/Contact.tsx';
+import Footer from '../../components/Footer/Footer.tsx';
 
 function HomePage() {
 	useEffect(() => {

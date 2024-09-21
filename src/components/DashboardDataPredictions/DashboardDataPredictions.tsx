@@ -7,52 +7,58 @@ import { FaFileAlt } from 'react-icons/fa';
 // Please note this is simply a testing page.
 
 
-
-type DataType = { [key: string]: any }; 
+// Define DataType as an object with string keys and unknown values
+type DataType = { [key: string]: unknown };
 
 const DashboardDataPredictions: React.FC = () => {
 	const [data, setData] = useState<DataType[]>([]);
 	const [fileLoaded, setFileLoaded] = useState<boolean>(false);
-	const [powerCurveData, setPowerCurveData] = useState<any>(null);
+	const [powerCurveData, setPowerCurveData] = useState<string | null>(null); // Use string | null instead of any
 	const [activityType, setActivityType] = useState<string>('Ride');
 	const [date, setDate] = useState<string>('2022-01-01');
 	const [numDays, setNumDays] = useState<number>(5);
 	const [testedFTP, setTestedFTP] = useState<number>(0);
 
+	// Handle file drop
 	const onDrop = useCallback((acceptedFiles: File[]) => {
-		acceptedFiles.forEach(file => {
+		acceptedFiles.forEach((file) => {
 			const reader = new FileReader();
 			reader.onabort = () => console.log('file reading was aborted');
 			reader.onerror = () => console.log('file reading has failed');
 			reader.onload = (e) => {
-				const { result } = e.target!;
-				const workbook = XLSX.read(result, { type: 'binary' });
-				const sheetName = workbook.SheetNames[0];
-				const worksheet = workbook.Sheets[sheetName];
-				const json = XLSX.utils.sheet_to_json(worksheet) as DataType[]; // Explicitly cast to DataType[]
-				setData(json); 
-				setFileLoaded(true); // Set the file loaded state to true
+				const result = e.target?.result;
+				if (typeof result === 'string') {
+					const workbook = XLSX.read(result, { type: 'binary' });
+					const sheetName = workbook.SheetNames[0];
+					const worksheet = workbook.Sheets[sheetName];
+					const json = XLSX.utils.sheet_to_json(worksheet) as DataType[]; // Explicitly cast to DataType[]
+					setData(json);
+					setFileLoaded(true); // Set the file loaded state to true
+				}
 			};
 			reader.readAsBinaryString(file);
 		});
 	}, []);
 
+	// Configure file drop zone
 	const { getRootProps, getInputProps } = useDropzone({
 		onDrop,
 		accept: {
 			'text/csv': ['.csv'],
 			'application/vnd.ms-excel': ['.xls'],
-			'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': ['.xlsx']
-		}
+			'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': ['.xlsx'],
+		},
 	});
 
+	// Reset file input and data
 	const resetInput = () => {
-		setFileLoaded(false); // Allow users to drop a new file
-		setData([]); // Clear the existing data
+		setFileLoaded(false);
+		setData([]);
 	};
 
+	// Fetch power curve data
 	const fetchPowerCurveData = () => {
-		fetch('http://localhost:5000/calculate-power-curve', {  // Ensure the correct URL
+		fetch('http://localhost:5000/calculate-power-curve', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -64,19 +70,18 @@ const DashboardDataPredictions: React.FC = () => {
 				testedFTP,
 			}),
 		})
-			.then(response => response.json())
-			.then(data => {
+			.then((response) => response.json())
+			.then((data) => {
 				if (data.imageUrl) {
 					setPowerCurveData(data.imageUrl);
-				}
-				else {
+				} else {
 					console.error('Error fetching power curve data:', data);
 				}
 			})
-			.catch(error => console.error('Error fetching power curve data:', error));
+			.catch((error) => console.error('Error fetching power curve data:', error));
 	};
-	
 
+	// Render table for file data
 	const renderTable = () => (
 		<div className={styles.filePreview}>
 			<table>
@@ -84,7 +89,7 @@ const DashboardDataPredictions: React.FC = () => {
 					{data.map((row, index) => (
 						<tr key={index}>
 							{Object.keys(row).map((cell, idx) => (
-								<td key={idx}>{row[cell]}</td>
+								<td key={idx}>{String(row[cell])}</td> // Ensure values are rendered as strings
 							))}
 						</tr>
 					))}
@@ -94,7 +99,7 @@ const DashboardDataPredictions: React.FC = () => {
 	);
 
 	return (
-		<div className={styles.mainContainerDataPred}>  
+		<div className={styles.mainContainerDataPred}>
 			<h1 className={styles.chartTitle}>Data & Predictions</h1>
 			<div className={styles.topSection}>
 				<p>Power Curve Data (Test Component for Old Backend)</p>
@@ -105,45 +110,46 @@ const DashboardDataPredictions: React.FC = () => {
 				) : (
 					<div className={styles.formContainer}>
 						<label className={styles.formLabel}>
-                            Activity Type:
-							<select 
-								value={activityType} 
+							Activity Type:
+							<select
+								value={activityType}
 								onChange={(e) => setActivityType(e.target.value)}
 								className={styles.formSelect}
 							>
 								<option value="Ride">Ride</option>
 								<option value="Run">Run</option>
-								{/* Add more options as needed */}
 							</select>
 						</label>
 						<label className={styles.formLabel}>
-                            Start Date:
-							<input 
-								type="date" 
-								value={date} 
-								onChange={(e) => setDate(e.target.value)} 
+							Start Date:
+							<input
+								type="date"
+								value={date}
+								onChange={(e) => setDate(e.target.value)}
 								className={styles.formInput}
 							/>
 						</label>
 						<label className={styles.formLabel}>
-                            Number of Days:
-							<input 
-								type="number" 
-								value={numDays} 
-								onChange={(e) => setNumDays(Number(e.target.value))} 
+							Number of Days:
+							<input
+								type="number"
+								value={numDays}
+								onChange={(e) => setNumDays(Number(e.target.value))}
 								className={styles.formInput}
 							/>
 						</label>
 						<label className={styles.formLabel}>
-                            Tested FTP:
-							<input 
-								type="number" 
-								value={testedFTP} 
-								onChange={(e) => setTestedFTP(Number(e.target.value))} 
+							Tested FTP:
+							<input
+								type="number"
+								value={testedFTP}
+								onChange={(e) => setTestedFTP(Number(e.target.value))}
 								className={styles.formInput}
 							/>
 						</label>
-						<button onClick={fetchPowerCurveData} className={styles.formButton}>Fetch Data</button>
+						<button onClick={fetchPowerCurveData} className={styles.formButton}>
+							Fetch Data
+						</button>
 					</div>
 				)}
 			</div>
@@ -159,7 +165,7 @@ const DashboardDataPredictions: React.FC = () => {
 				) : (
 					<div>
 						<button onClick={resetInput} className={styles.resetButton}>
-                            Replace File
+							Replace File
 						</button>
 						{renderTable()}
 					</div>

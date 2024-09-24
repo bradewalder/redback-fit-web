@@ -1,7 +1,7 @@
 // If not already correctly set, adjust the styled components for layout.
 import { FC } from 'react';
 import { GlobalHeader, RootWrapper } from './Root.style';
-import { Link, Outlet, useRouteError } from 'react-router-dom';
+import { Outlet, useRouteError } from 'react-router-dom';
 import ErrorPage from '../ErrorPage/ErrorPage.tsx';
 
 const Root: FC = () => {

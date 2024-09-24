@@ -1,6 +1,6 @@
-import AboutBackground from '../../assets/about-background.png'
+import AboutBackground from '../../assets/about-background.png';
 import { BsFillPlayCircleFill } from 'react-icons/bs';
-import styles from '../../routes/HomePage/HomePage.module.css'
+import styles from '../../routes/HomePage/HomePage.module.css';
 
 const About = () => {
 	return (

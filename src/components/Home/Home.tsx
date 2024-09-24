@@ -1,7 +1,7 @@
-import BannerBackground from '../../assets/home-banner-background.png'
+import BannerBackground from '../../assets/home-banner-background.png';
 import Navbar from '.././NavBar/NavBar';
 import { FiArrowRight } from 'react-icons/fi';
-import styles from '../../routes/HomePage/HomePage.module.css'
+import styles from '../../routes/HomePage/HomePage.module.css';
 
 const Home = () => {
 	return (

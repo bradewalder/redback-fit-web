@@ -74,7 +74,8 @@ const DashboardDataPredictions: React.FC = () => {
 			.then((data) => {
 				if (data.imageUrl) {
 					setPowerCurveData(data.imageUrl);
-				} else {
+				}
+				else {
 					console.error('Error fetching power curve data:', data);
 				}
 			})
